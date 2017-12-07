@@ -10,7 +10,7 @@ import { MessageService } from "./message.service";
         .author {
             display: inline-block;
             font-style: italic;
-            font-size: 12px;
+            font-size: 14px;
             width: 80%;
         }
         .config {
@@ -18,6 +18,14 @@ import { MessageService } from "./message.service";
             text-align: right;
             font-size: 12px;
             width: 19%;
+        }
+        @media (max-width: 750px) {
+            .config {
+                display: block;
+                text-align: left;
+                font-size: 10px;
+                width: 5%;
+            }
         }
     `]
 })

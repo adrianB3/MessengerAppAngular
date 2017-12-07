@@ -56,7 +56,7 @@ router.post('/', function (req, res, next) {
                     error: err
                 });
             }
-            user.messages.push(result);
+            user.messages.unshift(result);
             user.save();
             res.status(201).json({
                 message: 'Saved message',

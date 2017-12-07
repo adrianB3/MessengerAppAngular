@@ -29,7 +29,7 @@ export class MessageService {
                     result.obj.user.firstName,
                     result.obj._id,
                     result.obj.user._id);
-                this.messages.push(message);
+                this.messages.unshift(message);
                 return message;
             })
             .catch((error: Response) => {

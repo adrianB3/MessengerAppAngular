@@ -15,15 +15,24 @@ import { MessageService } from "./message.service";
 })
 export class MessageListComponent implements OnInit {
     messages: Message[];
+    interval:any;
 
     constructor(private messageService: MessageService) {}
 
-    ngOnInit() {
+    refreshData() {
         this.messageService.getMessages()
             .subscribe(
                 (messages: Message[]) => {
-                    this.messages = messages;
+                    this.messages = messages.reverse();
                 }
             );
+    }
+
+    ngOnInit() {
+
+        this.refreshData();
+        this.interval = setInterval(() => {
+            this.refreshData();
+        }, 5000);
     }
 }

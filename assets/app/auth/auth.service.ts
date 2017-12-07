@@ -6,6 +6,7 @@ import { Observable } from "rxjs";
 import { User } from "./user.model";
 import { ErrorService } from "../errors/error.service";
 import {url} from "../url";
+import {Message} from "../messages/message.model";
 
 @Injectable()
 export class AuthService {

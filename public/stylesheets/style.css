@@ -1,6 +1,9 @@
 body {
-  padding: 10%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font: 18px "Lucida Grand", Helvetica, Arial, sans-serif;
+  margin-top: 10px;
+  background-image: url("backgroundTexture.jpg");
+  background-size: cover;
 }
 
 a {
@@ -24,4 +27,23 @@ a.danger {
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
+}
+
+label {
+  color: lightblue;
+}
+.inputContent {
+  background-color: transparent;
+  padding: 10px;
+}
+.author {
+  color:steelblue;
+  font-family:"Bitstream Charter";
+}
+
+@media (min-width:768px){
+  .navbar .navbar-default {
+    position: relative;
+    display: block;
+  }
 }
